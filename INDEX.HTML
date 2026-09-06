@@ -1,0 +1,170 @@
+/* <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Web Manifesto</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <h1 class="title typewriter">THE WEB SHOULD FEEL HUMAN</h1>
+
+      <p class="intro">
+        Not engineered for endless scrolling, but designed for intention, clarity, and connection.
+      </p>
+
+      <section class="manifesto">
+        <p>
+          The web has become loud—optimized for engagement instead of understanding.
+          I believe it should return to being a space where people can think, create,
+          and share without being pushed, tracked, or shaped by invisible systems.
+          A human web is one where design is honest, algorithms are transparent,
+          and users understand the structures behind what they see.
+          View source shouldn’t just reveal code—it should reveal values.
+        </p>
+      </section>
+
+      <a
+        class="link"
+        href="https://criticalengineering.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Critical Engineering Manifesto
+      </a>
+
+      <footer class="footer">
+        <p>Project 01 · View Source</p>
+      </footer>
+    </main>
+  </body>
+</html>
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0d;
+  color: #f2f2f7;
+  font-family: system-ui, sans-serif;
+}
+
+/* Layout */
+.container {
+  padding: 3rem clamp(1.5rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-height: 100vh;
+  animation: fadeUp 0.9s ease both;
+}
+
+/* Page entrance */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title */
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+/* Typewriter effect with fade-out cursor */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards,
+             blink 0.7s step-end 3s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: #ffffff;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #ffffff;
+  }
+}
+
+/* Intro line */
+.intro {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9fa6ff;
+  margin-bottom: 1.5rem;
+}
+
+/* Manifesto paragraph */
+.manifesto p {
+  max-width: 42rem;
+  line-height: 1.7;
+  color: #d8d8e8;
+  margin-top: 0.5rem;
+}
+
+.manifesto p::first-line {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Link */
+.link {
+  display: inline-block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  color: #ffd97a;
+  border-bottom: 1px solid #ffd97a;
+  padding-bottom: 0.15rem;
+  margin-top: 1rem;
+  transition: 0.25s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b6f80;
+}
